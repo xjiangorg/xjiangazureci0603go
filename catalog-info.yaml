@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: xjiangazureci0603go 
+  description: Secure Supply Chain Example for Go Runtime http based application with advanced continuous integration pipeline covering building, CVE scanning, security scanning, signatures,  attestations, SLSA provenance and SBOM along with Gitops-based continuous deployment   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used tssc-gitops as the grouping
+    argocd/app-selector: tssc/gitops=xjiangazureci0603go
+    backstage.io/kubernetes-id: xjiangazureci0603go 
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/project-repo: xjiangorg/xjiangazureci0603go
+    dev.azure.com/project: shared-public
+    dev.azure.com/build-definition: xjiangorg.xjiangazureci0603go
+    quay.io/repository-slug: quay_xjiang/xjiangazureci0603go
+  tags: ["go", "sscs", "sbom", "acs"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
